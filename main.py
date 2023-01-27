@@ -53,13 +53,13 @@ def run_islkdirect():
             time = datetime.datetime.now().strftime('%I:%M %p')
             talk('Current time is ' + time)
 
-        elif 'brother who is' in command:
-            person = command.replace('brother who is', '')
+        elif 'who the heck is' in command:
+            person = command.replace('who the heck is', '')
             info = wikipedia.summary(person, 1)
             print(info)
             talk(info)
 
-        elif 'run me joke' in command:
+        elif 'tell me a joke' in command:
             talk(pyjokes.get_joke())
 
         elif "where is room 209" in command:
@@ -74,7 +74,7 @@ def run_islkdirect():
             print(room_209)
             talk(room_209)
 
-        elif "fam where is the design room" in command:
+        elif "where is the design room" in command:
             design_room ="The design room is in the old building, " \
                          "on the right of the flag, " \
                          "when you enter the old building you go down the stairs, " \
@@ -263,4 +263,6 @@ main_screen()
 
 while True:
     run_islkdirect()
+
+
 
