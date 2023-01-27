@@ -49,7 +49,7 @@ def run_islkdirect():
             talk('Your personal assistant is shutting down, Good bye')
             screen.destroy()
 
-        elif 'time' in command:
+        elif 'what is the time' in command:
             time = datetime.datetime.now().strftime('%I:%M %p')
             talk('Current time is ' + time)
 
